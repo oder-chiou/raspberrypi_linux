@@ -116,7 +116,8 @@ dtbo-$(CONFIG_ARCH_BCM2835) += \
 	vga666.dtbo \
 	w1-gpio.dtbo \
 	w1-gpio-pullup.dtbo \
-	wittypi.dtbo
+	wittypi.dtbo \
+	realtek-codec.dtbo
 
 targets += dtbs dtbs_install
 targets += $(dtbo-y)

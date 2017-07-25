@@ -1,0 +1,22 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "brcm,bcm2836";
+
+	fragment@0 {
+		target = <&sound>;
+		__overlay__ {
+			compatible = "realtek-codec";
+			i2s-controller = <&i2s>;
+			status = "okay";
+		};
+	};
+
+	fragment@1 {
+		target = <&i2s>;
+		__overlay__ {
+			status = "okay";
+		};
+	};
+};
