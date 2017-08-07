@@ -1,0 +1,21 @@
+pcm.!default {
+	type asym
+
+	playback.pcm {
+		type plug
+		slave.pcm {
+			type dmix
+			ipc_key 5780211
+			slave.pcm "hw:0,0"
+		}
+	}
+
+	capture.pcm {
+		type plug
+		slave.pcm {
+			type dsnoop
+			ipc_key 5780211
+			slave.pcm "hw:0,0"
+		}
+	}
+}
